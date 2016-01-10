@@ -32,7 +32,7 @@ module.exports = function stateful (Component, options) {
   function setState (model) {
     return function (values) {
       if (typeof states[model.path] === 'object' && typeof values === 'object') {
-        assign(states[model.path], values)
+        states[model.path] = assign({}, states[model.path], values)
       } else {
         states[model.path] = values
       }
