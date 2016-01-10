@@ -27,7 +27,7 @@ test('initialState', function (t) {
 
   t.plan(2)
 
-  component = stateful({
+  var component = stateful({
     initialState: function (model) {
       t.pass('initialstate called')
       return { name: 'jake' }
@@ -54,7 +54,7 @@ test('set state', function (t) {
     render(h(component))
   }
 
-  component = stateful({
+  var component = stateful({
     initialState: function (model) {
       return { name: 'jake' }
     },
@@ -78,3 +78,5 @@ test('set state', function (t) {
     t.end()
   }, 100)
 })
+
+test('standard', require('tape-standard')())

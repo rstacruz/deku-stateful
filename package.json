@@ -30,6 +30,8 @@
   "devDependencies": {
     "deku": "2.0.0-rc12",
     "jsdom": "7.2.2",
-    "tape": "4.4.0"
+    "standard": "5.4.1",
+    "tape": "4.4.0",
+    "tape-standard": "1.0.0"
   }
 }
