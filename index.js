@@ -6,11 +6,9 @@ module.exports = function stateful (Component, options) {
   if (!options.action) options.action = { type: 'UI_STATE_CHANGE' }
 
   var states = {}
-  var pending = {}
   var dispatch
 
   var update = debounce(function () {
-    pending = {}
     dispatch(options.action)
   }, 0)
 
@@ -38,7 +36,6 @@ module.exports = function stateful (Component, options) {
       } else {
         states[model.path] = values
       }
-      pending[model.path] = true
       dispatch = model.dispatch
       update()
     }
@@ -72,20 +69,9 @@ module.exports = function stateful (Component, options) {
     })
   }
 
-  /*
-   * Though not implemented in deku/decca, implement shouldUpdate() anyway.
-   * This will be picked up by deku-memoize.
-   */
-
-  function shouldUpdate (prev, next) {
-    return pending[prev.path] ||
-      (Component.shouldUpdate && Component.shouldUpdate(prev, next))
-  }
-
   return assign({}, Component, {
     render: render,
     onRemove: onRemove,
-    onUpdate: onUpdate,
-    shouldUpdate: shouldUpdate
+    onUpdate: onUpdate
   })
 }
