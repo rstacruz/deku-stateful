@@ -5,6 +5,8 @@
 Deku v2 has no states in components. This is a higher-order component that adds `state` and `setState` to the model.
 See this [conversation here](https://github.com/dekujs/deku/issues/337#issuecomment-168034492).
 
+Compatible with Deku 2.0.0 (tested with 2.0.0-rc11) and Decca 2.0.0.
+
 ```js
 import stateful from 'deku-stateful'
 
