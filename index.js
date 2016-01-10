@@ -33,9 +33,12 @@ module.exports = function stateful (Component, options) {
 
   function setState (model) {
     return function (values) {
-      if (!states[model.path]) states[model.path] = {}
+      if (typeof states[model.path] === 'object' && typeof values === 'object') {
+        assign(states[model.path], values)
+      } else {
+        states[model.path] = values
+      }
       pending[model.path] = true
-      assign(states[model.path], values)
       dispatch = model.dispatch
       update()
     }
