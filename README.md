@@ -7,6 +7,8 @@ See this [conversation here](https://github.com/dekujs/deku/issues/337#issuecomm
 
 Compatible with Deku 2.0.0 (tested with 2.0.0-rc11) and Decca 2.0.0.
 
+[![Status](https://travis-ci.org/rstacruz/deku-stateful.svg?branch=master)](https://travis-ci.org/rstacruz/deku-stateful "See test builds")
+
 ```js
 import stateful from 'deku-stateful'
 
