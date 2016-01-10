@@ -28,6 +28,7 @@
     "simpler-debounce": "1.0.0"
   },
   "devDependencies": {
+    "decca": "2.0.0",
     "deku": "2.0.0-rc12",
     "jsdom": "7.2.2",
     "standard": "5.4.1",
