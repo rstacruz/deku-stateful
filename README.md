@@ -12,11 +12,20 @@ Compatible with Deku 2.0.0 (tested with 2.0.0-rc11) and Decca 2.0.0.
 ```js
 import stateful from 'deku-stateful'
 
-function render ({ state, setState }) {
-  return <button onClick={ () => setState({ clicked: true }) }>Click me</button>
+function initialState () {
+  return { clicked: 0 }
 }
 
-export default stateful({ render })
+function render ({ state, setState }) {
+  return <div>
+    Clicked { state.clicked } times.
+    <button onClick={ () => setState({ clicked: state.clicked + 1 }) }>
+      Click me
+    </button>
+  </div>
+}
+
+export default stateful({ initialState, render })
 ```
 
 ## API
