@@ -25,6 +25,8 @@ export default stateful({ render })
 
 The `render` function and the lifecycle hooks will also be passed `state` and `setState`.
 
+When `setState` is ran, it will queue up changes and dispatch an event like `dispatch({ type: 'UI_STATE_CHANGE' })`. This is meant to be picked up by your Redux store, which we're assuming will retrigger a `render()` when called.
+
 ### initialState
 
 Your component can have an `initialState` function. Return the first state here.
