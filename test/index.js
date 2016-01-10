@@ -34,7 +34,7 @@ test('initialState', function (t) {
     },
 
     render: function (model) {
-      return h('div', {}, 'hello ' + (model.state && model.state.name))
+      return h('div', {}, 'hello ', model.state.name)
     }
   })
 
@@ -42,4 +42,39 @@ test('initialState', function (t) {
 
   t.equal(el.innerHTML, '<div>hello jake</div>', 'first render')
   t.end()
+})
+
+test('set state', function (t) {
+  t.plan(4) // 2 dispatch, 2 renders
+  var el = document.createElement('div')
+  var render = deku.dom.createRenderer(el, dispatch)
+
+  function dispatch () {
+    t.pass('dispatch called')
+    render(h(component))
+  }
+
+  component = stateful({
+    initialState: function (model) {
+      return { name: 'jake' }
+    },
+
+    render: function (model) {
+      setTimeout(function () {
+        if (model.state.name === 'jake') {
+          model.setState({ name: 'john' })
+        }
+      })
+      return h('div', {}, 'hello ', model.state.name)
+    }
+  })
+
+  dispatch()
+
+  t.equal(el.innerHTML, '<div>hello jake</div>', 'first render')
+
+  setTimeout(function () {
+    t.equal(el.innerHTML, '<div>hello john</div>', 'next render')
+    t.end()
+  }, 100)
 })
