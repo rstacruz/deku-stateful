@@ -9,10 +9,28 @@ See this [conversation here](https://github.com/dekujs/deku/issues/337#issuecomm
 import stateful from 'deku-stateful'
 
 function render ({ state, setState }) {
-  // ...
+  return <button onClick={ () => setState({ clicked: true }) }>Click me</button>
 }
 
 export default stateful({ render })
+```
+
+## API
+
+### render, onCreate, onUpdate
+
+The `render` function and the lifecycle hooks will also be passed `state` and `setState`.
+
+### initialState
+
+Your component can have an `initialState` function. Return the first state here.
+
+```js
+function initialState ({ props }) {
+  return { clicked: false }
+}
+
+export default stateful({ initialState, render })
 ```
 
 ## Thanks
