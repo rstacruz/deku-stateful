@@ -4,7 +4,7 @@
   "description": "Keep states in a Deku component",
   "main": "index.js",
   "scripts": {
-    "test": "node test/index.js",
+    "test": "node test/index.js | tap-spec",
     "test:watch": "tape-watch test/index.js -r deku -p tap-spec"
   },
   "repository": {
