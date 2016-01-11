@@ -1,5 +1,3 @@
-if (process.env.JSDOM) require('./_jsdom')
-
 var test = require('tape')
 var deku = require('deku')
 var stateful = require('../index')
