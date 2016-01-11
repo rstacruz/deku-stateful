@@ -4,8 +4,8 @@
   "description": "Keep states in a Deku component",
   "main": "index.js",
   "scripts": {
-    "test": "node test/_jsdom.js",
-    "test:watch": "tape-watch test/_jsdom.js -r deku -p tap-spec"
+    "test": "node test/index.js",
+    "test:watch": "tape-watch test/index.js -r deku -p tap-spec"
   },
   "repository": {
     "type": "git",
@@ -32,11 +32,11 @@
     "decca": "2.0.0",
     "deku": "2.0.0-rc12",
     "jsdom": "7.2.2",
-    "jsdom-global": "1.0.0",
+    "jsdom-global": "1.3.0",
     "standard": "5.4.1",
     "tap-spec": "4.1.1",
     "tape": "4.4.0",
-    "tape-standard": "1.0.0",
+    "tape-standard": "1.1.0",
     "tape-watch": "1.2.0"
   }
 }

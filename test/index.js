@@ -3,6 +3,8 @@ var deku = require('deku')
 var stateful = require('../index')
 var h = deku.element
 
+test('invoking jsdom', require('jsdom-global/tape')())
+
 test('stateful', function (t) {
   var el = document.createElement('div')
   var render = deku.dom.createRenderer(el, dispatch)
