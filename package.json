@@ -32,6 +32,7 @@
     "decca": "2.0.0",
     "deku": "2.0.0-rc12",
     "jsdom": "7.2.2",
+    "jsdom-global": "1.0.0",
     "standard": "5.4.1",
     "tap-spec": "4.1.1",
     "tape": "4.4.0",
