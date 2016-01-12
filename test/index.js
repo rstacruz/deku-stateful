@@ -81,4 +81,6 @@ test('set state', function (t) {
   }, 100)
 })
 
-test('standard', require('tape-standard')())
+test('eslint', require('tape-eslint')({
+  eslint: { extends: ['standard'] }
+}))
