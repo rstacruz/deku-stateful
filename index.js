@@ -58,6 +58,10 @@ module.exports = function stateful (Component, options) {
     if (Component.onUpdate) Component.onUpdate(decorateModel(model))
   }
 
+  function onCreate (model) {
+    if (Component.onCreate) Component.onCreate(decorateModel(model))
+  }
+
   /*
    * Adds `state` and `setState` to the model.
    */
@@ -72,6 +76,7 @@ module.exports = function stateful (Component, options) {
   return assign({}, Component, {
     render: render,
     onRemove: onRemove,
-    onUpdate: onUpdate
+    onUpdate: onUpdate,
+    onCreate: onCreate
   })
 }
