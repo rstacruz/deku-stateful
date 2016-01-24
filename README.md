@@ -28,6 +28,11 @@ function render ({ state, setState }) {
 export default stateful({ initialState, render })
 ```
 
+## Example
+
+- [Tabs example](https://jsfiddle.net/rstacruz/jwLncxfd/)
+- [Simple counter example](https://jsfiddle.net/rstacruz/m6mkac75/)
+
 ## API
 
 ### render, onCreate, onUpdate
