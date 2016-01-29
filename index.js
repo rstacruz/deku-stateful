@@ -46,7 +46,7 @@ module.exports = function stateful (Component, options) {
    */
 
   function onRemove (model) {
-    states[model.path] = undefined
+    delete states[model.path]
     if (Component.onRemove) Component.onRemove(model)
   }
 
