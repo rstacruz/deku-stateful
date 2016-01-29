@@ -1,3 +1,10 @@
+## [v1.4.0]
+> Jan 29, 2016
+
+- [#2] - Fix issue with states being reset randomly. ([#3], [@11111000000])
+
+[v1.4.0]: https://github.com/rstacruz/deku-stateful/compare/v1.3.0...v1.4.0
+
 ## [v1.3.0]
 > Jan 25, 2016
 
@@ -26,3 +33,6 @@ Initial release.
 
 [v1.0.0]: https://github.com/rstacruz/deku-stateful/tree/v1.0.0
 [#1]: https://github.com/rstacruz/deku-stateful/issues/1
+[#2]: https://github.com/rstacruz/deku-stateful/issues/2
+[#3]: https://github.com/rstacruz/deku-stateful/issues/3
+[@11111000000]: https://github.com/11111000000
