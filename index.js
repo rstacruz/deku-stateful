@@ -46,8 +46,10 @@ module.exports = function stateful (Component, options) {
    */
 
   function onRemove (model) {
-    delete states[model.path]
-    if (Component.onRemove) Component.onRemove(model)
+    if (Component.onRemove) Component.onRemove(decorateModel(model))
+    setTimeout(function () {
+      delete states[model.path]
+    }, 0)
   }
 
   /*
