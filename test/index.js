@@ -22,6 +22,21 @@ test('stateful', function (t) {
   t.end()
 })
 
+test('dumb components', function (t) {
+  var el = document.createElement('div')
+  var render = deku.dom.createRenderer(el, dispatch)
+  function dispatch () { render(h(component)) }
+
+  var component = stateful(function (model) {
+      return h('div', {}, 'hello world')
+  })
+
+  dispatch()
+
+  t.equal(el.innerHTML, '<div>hello world</div>', 'first render')
+  t.end()
+})
+
 test('initialState', function (t) {
   var el = document.createElement('div')
   var render = deku.dom.createRenderer(el, dispatch)

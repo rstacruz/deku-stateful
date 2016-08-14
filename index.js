@@ -2,6 +2,10 @@ var assign = require('object-assign')
 var debounce = require('simpler-debounce')
 
 module.exports = function stateful (Component, options) {
+  if (typeof Component === 'function') {
+    Component = { render: Component }
+  }
+
   if (!options) options = {}
   if (!options.action) options.action = { type: 'UI_STATE_CHANGE' }
 
