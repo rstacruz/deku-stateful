@@ -1,3 +1,10 @@
+## [v1.5.0]
+> Aug 15, 2016
+
+- Support [Decca](http://ricostacruz.com/decca)'s function-only components.
+
+[v1.5.0]: https://github.com/rstacruz/deku-stateful/compare/v1.4.0...v1.5.0
+
 ## [v1.4.0]
 > Jan 29, 2016
 

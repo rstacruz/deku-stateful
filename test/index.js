@@ -28,7 +28,7 @@ test('dumb components', function (t) {
   function dispatch () { render(h(component)) }
 
   var component = stateful(function (model) {
-      return h('div', {}, 'hello world')
+    return h('div', {}, 'hello world')
   })
 
   dispatch()
