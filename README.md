@@ -35,7 +35,7 @@ export default stateful({ initialState, render })
 
 ## API
 
-### render, onCreate, onUpdate
+### render, onCreate, onUpdate, onRemove
 
 The `render` function and the lifecycle hooks will also be passed `state` and `setState`.
 
