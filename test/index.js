@@ -72,11 +72,11 @@ describe('deku-stateful', function (it) {
 
       render: function (model) {
         setTimeout(function () {
-          if (model.state.name === 'jake') {
+          if (model.getState().name === 'jake') {
             model.setState({ name: 'john' })
           }
         })
-        return h('div', {}, 'hello ', model.state.name)
+        return h('div', {}, 'hello ', model.getState().name)
       }
     })
 

@@ -16,10 +16,10 @@ function initialState () {
   return { clicked: 0 }
 }
 
-function render ({ state, setState }) {
+function render ({ getState, setState }) {
   return <div>
-    Clicked { state.clicked } times.
-    <button onClick={ () => setState({ clicked: state.clicked + 1 }) }>
+    Clicked { getState().clicked } times.
+    <button onClick={ () => setState({ clicked: getState().clicked + 1 }) }>
       Click me
     </button>
   </div>
@@ -37,9 +37,16 @@ export default stateful({ initialState, render })
 
 ### render, onCreate, onUpdate, onRemove
 
-The `render` function and the lifecycle hooks will also be passed `state` and `setState`.
+The `render` function and the lifecycle hooks will also be passed `getState` and `setState`.
 
-When `setState` is ran, it will queue up changes and dispatch an event like `dispatch({ type: 'UI_STATE_CHANGE' })`. This is meant to be picked up by your Redux store, which we're assuming will retrigger a `render()` when called.
+```js
+function render({ getState, setState }) {
+}
+```
+
+- `setState(object)` — Updates the state when called. When `setState` is ran, it will queue up changes and dispatch an event like `dispatch({ type: 'UI_STATE_CHANGE' })`. This is meant to be picked up by your Redux store, which we're assuming will retrigger a `render()` when called.
+- `getState()` — Returns the current state.
+- `state` — The current state; it's preferred to use `getState()` instead, but it's here for legacy compatibility.
 
 ### initialState
 

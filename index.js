@@ -73,6 +73,7 @@ module.exports = function stateful (Component, options) {
   function decorateModel (model) {
     return assign({}, model, {
       state: states[model.path],
+      getState: function () { return states[model.path] },
       setState: setState(model)
     })
   }
