@@ -1,3 +1,10 @@
+## [v1.6.0]
+> Sep 20, 2016
+
+- [#7] - Fix issue with onRemove not being able to access state. ([#8], [@borisirota])
+
+[v1.6.0]: https://github.com/rstacruz/deku-stateful/compare/v1.5.0...v1.6.0
+
 ## [v1.5.0]
 > Aug 15, 2016
 
@@ -43,3 +50,6 @@ Initial release.
 [#2]: https://github.com/rstacruz/deku-stateful/issues/2
 [#3]: https://github.com/rstacruz/deku-stateful/issues/3
 [@11111000000]: https://github.com/11111000000
+[#7]: https://github.com/rstacruz/deku-stateful/issues/7
+[#8]: https://github.com/rstacruz/deku-stateful/issues/8
+[@borisirota]: https://github.com/borisirota
