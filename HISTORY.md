@@ -1,3 +1,10 @@
+## [v1.7.0]
+> Sep 20, 2016
+
+- Implement `getState()`. (Related: [#4], [@11111000000])
+
+[v1.7.0]: https://github.com/rstacruz/deku-stateful/compare/v1.6.0...v1.7.0
+
 ## [v1.6.0]
 > Sep 20, 2016
 
@@ -53,3 +60,4 @@ Initial release.
 [#7]: https://github.com/rstacruz/deku-stateful/issues/7
 [#8]: https://github.com/rstacruz/deku-stateful/issues/8
 [@borisirota]: https://github.com/borisirota
+[#4]: https://github.com/rstacruz/deku-stateful/issues/4

@@ -1,6 +1,6 @@
 {
   "name": "deku-stateful",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "description": "Keep states in a Deku component",
   "main": "index.js",
   "scripts": {
