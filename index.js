@@ -1,7 +1,16 @@
 var assign = require('object-assign')
 var debounce = require('simpler-debounce')
 
-module.exports = function stateful (Component, options) {
+/**
+ * Decorates a Deku/Decca `Component` to add stateful-ness.
+ *
+ * @param {Component} component The component to render
+ * @param {object=} options Options to be passed
+ * @param {string=} options.action The action to be dispatched
+ * @return {Component}
+ */
+
+function stateful (Component, options) {
   if (typeof Component === 'function') {
     Component = { render: Component }
   }
@@ -85,3 +94,5 @@ module.exports = function stateful (Component, options) {
     onCreate: onCreate
   })
 }
+
+module.exports = stateful
