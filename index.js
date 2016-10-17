@@ -32,7 +32,7 @@ function stateful (Component, options) {
 
   function render (model) {
     if (!states.hasOwnProperty(model.path)) {
-      states[model.path] = (Component.initialState && Component.initialState(model))
+      states[model.path] = (Component.initialState && Component.initialState(decorateModel(model)))
     }
 
     return Component.render(decorateModel(model))
